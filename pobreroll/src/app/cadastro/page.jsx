@@ -1,7 +1,9 @@
+import "./cadastro.css"
+
 export default function Cadastro() {
   return (
     <>
-      <h1>Cadastro</h1>
+      <h1>Oi</h1>
     </>
   );
 }
