@@ -1,10 +1,33 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import "./home.css";
 
 export default function Home() {
   return (
     <>
-    <h1>index</h1>
+      <main>
+        <div className="hero">
+          <div className="overlay">
+            <h1>Interestelar</h1>
+            <p>
+              Uma equipe de exploradores viaja através de um buraco de minhoca no espaço
+              na tentativa de garantir a sobrevivência da humanidade.
+            </p>
+            <button className="btn0">Assistir</button>
+          </div>
+        </div>
+
+        <section>
+          <h1>djsad</h1>
+          <h1>djsad</h1>
+          <h1>djsad</h1>
+          <h1>djsad</h1>
+          <h1>djsad</h1>
+          <h1>djsad</h1>
+          <h1>djsad</h1>
+          <h1>djsad</h1>
+        </section>
+      </main>
     </>
   );
 }

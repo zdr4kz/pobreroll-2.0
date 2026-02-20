@@ -1,0 +1,45 @@
+header {
+  position: absolute; /* fica sobre a imagem */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  color: white;
+  z-index: 10; /* garante que fique na frente */
+  background: transparent;
+}
+
+.hero {
+  position: relative;
+}
+
+.btnLogin {
+  padding: 8px 18px;
+  background: #7F00B2;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.btnLogin:hover {
+  transition: 0.4s ease;
+  background: #9B00E8;
+  transform: scale(1.01);
+
+}
+
+.nav-link {
+  transition: 0.3s;
+}
+
+.active {
+  color: white !important;
+  font-weight: bold;
+}
+
+.inactive {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
