@@ -3,7 +3,7 @@ import "./cadastro.css"
 export default function Cadastro() {
   return (
     <>
-      <h1>Oi</h1>
+      <h1>Página de cadastro</h1>
     </>
   );
 }
