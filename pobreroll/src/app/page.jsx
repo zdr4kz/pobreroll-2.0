@@ -7,26 +7,50 @@ export default function Home() {
     <>
       <main>
         <div className="hero">
-          <div className="overlay">
-            <h1>Interestelar</h1>
-            <p>
-              Uma equipe de exploradores viaja através de um buraco de minhoca no espaço
-              na tentativa de garantir a sobrevivência da humanidade.
-            </p>
-            <button className="btn0">Assistir</button>
+          <div className="row">
+            <div className="col-lg-10 col-md-8 col-12 overlay">
+              <h1>Interestelar</h1>
+              <p>
+                Uma equipe de exploradores viaja através de um buraco de minhoca no espaço
+                na tentativa de garantir a sobrevivência da humanidade.
+              </p>
+              <button className="btn0">Assistir</button>
+            </div>
           </div>
         </div>
 
         <section>
-          <h1>djsad</h1>
-          <h1>djsad</h1>
-          <h1>djsad</h1>
-          <h1>djsad</h1>
-          <h1>djsad</h1>
-          <h1>djsad</h1>
-          <h1>djsad</h1>
-          <h1>djsad</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio</h1>
+    <h1>sapofjsdiohsdio     </h1>
         </section>
+
+
       </main>
     </>
   );
