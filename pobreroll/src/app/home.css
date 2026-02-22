@@ -7,7 +7,7 @@ html, body {
 
 .hero {
   height: 90vh;
-  background-image: url("https://image.tmdb.org/t/p/original/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg");
+  background-image: url("/inte.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
