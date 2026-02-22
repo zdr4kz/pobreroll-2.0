@@ -47,7 +47,7 @@ export default function Header() {
     >
       <div className="col-md-3 mb-2 mb-md-0 ms-5">
         <a href="/" className="logo">
-          NomeDoStreaming
+         Lumos
         </a>
       </div>
 
@@ -96,9 +96,11 @@ export default function Header() {
       </ul>
 
       <div className="col-md-3 text-end">
-        <button type="button" className="btnLogin">
-          Sign-up
-        </button>
+        <a href="/login">
+          <button type="button" className="btnLogin">
+            Sign-up
+          </button>
+        </a>
       </div>
     </header>
   );
