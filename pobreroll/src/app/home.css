@@ -1,0 +1,79 @@
+/*==============================
+  Home Page Styles
+================================*/
+
+.hero {
+  height: 90vh;
+  background-image: url("https://image.tmdb.org/t/p/original/nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  background-color: rgb(128, 168, 204);
+  align-items: flex-end;
+  padding: 40px 60px;
+}
+
+.overlay {
+  color: white;
+  max-width: 500px;
+  margin-bottom: 60px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ==================
+  Centralizar no celular
+  ================== */
+
+  @media (max-width: 768px) {
+  .overlay {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+
+.btn0 {
+  padding: 10px 20px;
+  background: #80dafd;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.btn0:hover {
+  transition: 0.4s ease;
+  background: #80dafdaf;
+  transform: scale(1.05);
+
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.hero {
+  position: relative;
+}
+
+.overlay {
+  position: relative;
+}
+
+
+/* ============================= */
