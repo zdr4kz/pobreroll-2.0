@@ -30,7 +30,7 @@
 
 .btnLogin {
   padding: 8px 18px;
-  background: #53bde7;
+  background: #3451b1;
   border: none;
   border-radius: 8px;
   color: white;
@@ -41,7 +41,7 @@
 
 .btnLogin:hover {
   transition: 0.4s ease;
-  background: #167ba3;
+  background: #4567d6fd;
   transform: scale(1.01);
 
 }
