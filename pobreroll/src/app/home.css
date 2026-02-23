@@ -11,7 +11,7 @@ html, body {
   background-size: cover;
   background-position: center;
   display: flex;
-  background-color: rgb(128, 168, 204);
+  /* background-color: rgb(128, 168, 204); */
   align-items: flex-end;
   padding: 40px 60px;
 }

@@ -46,9 +46,11 @@ export default function Header() {
       d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3`}
     >
       <div className="col-md-3 mb-2 mb-md-0 ms-5">
-        <a href="/" className="logo">
-         Lumos
-        </a>
+      <a href="">
+        <div className="d-flex bg-dannger p0">
+          <img src="/lumos.png" alt="" />
+        </div>
+      </a>  
       </div>
 
       <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">

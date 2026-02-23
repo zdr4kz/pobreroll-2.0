@@ -59,6 +59,15 @@
   color: rgba(255, 255, 255, 0.6) !important;
 }
 
+.p0{
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+  /* background-color: yellowgreen; */
+}
+
 
 @media (max-width: 768px) {
   header {
