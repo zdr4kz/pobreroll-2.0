@@ -1,3 +1,4 @@
+import {shows} from "@/data/shows";
 import Image from "next/image";
 import styles from "./page.module.css";
 import "./home.css";
@@ -21,7 +22,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="bg-dark p-3"style={{ height: "4200px" }}>
+        <section className="s1 bg-dark p-3"style={{ height: "4200px" }}>
 
           <div className="">
             <h3 className="text-white ps-3 pt-2">Animações para toda a família</h3>
