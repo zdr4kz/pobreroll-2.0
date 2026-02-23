@@ -47,7 +47,7 @@ html, body {
 
 .btn0 {
   padding: 10px 20px;
-  background: #80dafd;
+  background: #3451b1;
   border: none;
   border-radius: 8px;
   color: white;
@@ -58,7 +58,7 @@ html, body {
 
 .btn0:hover {
   transition: 0.4s ease;
-  background: #80dafdaf;
+  background: #4567d6fd;
   transform: scale(1.05);
 
 }
