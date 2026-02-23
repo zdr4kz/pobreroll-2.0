@@ -21,8 +21,8 @@
 
 /* ===== CARD ===== */
 .carousel-card {
-  min-width: 260px;
-  height: 150px;
+  min-width: 280px;
+  height: 165px;
   flex: 0 0 auto;
   border-radius: 8px;
   cursor: pointer;
@@ -61,7 +61,7 @@
   font-size: 32px;
 
   width: 46px;
-  height: 150px;
+  height: 165px;
 
   cursor: pointer;
   transition: opacity 0.25s ease, background 0.2s ease;
