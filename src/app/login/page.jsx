@@ -25,6 +25,7 @@ const Input = () => {
                                         <label className="user-label">Senha</label>
                                     </div>
                                     <button className="subscribe-button w-100 rounded" type="submit">Entrar</button>
+                                    <p>Ainda não tem uma conta? <a href="/cadastro" className="link">Cadastre-se!</a></p>
                                 </div>
                             </form>
                             <div className="success-message" id="successMessage">

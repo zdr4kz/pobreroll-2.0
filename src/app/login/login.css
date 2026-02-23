@@ -33,6 +33,25 @@
 
 }
 
-.rounded{
+.rounded {
     border-radius: 8px !important;
+}
+
+.link {
+    color: #80dafd;
+    text-decoration: none;
+    background:
+        linear-gradient(to right,
+            transparent, transparent),
+        linear-gradient(to right,
+            #80dafd);
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 3px;
+    transition: background-size 400ms;
+}
+
+.link:hover {
+    background-size: 0 3px, 100% 3px;
 }

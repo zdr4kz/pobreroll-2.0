@@ -28,8 +28,10 @@
   position: relative;
 }
 
-.btnLogin {
+.btnCadastro {
+  height: 45px;
   padding: 8px 18px;
+  border: 2px solid #3451b1;
   background: #3451b1;
   border: none;
   border-radius: 8px;
@@ -39,9 +41,30 @@
   transition: 0.4s ease;
 }
 
-.btnLogin:hover {
+.btnCadastro:hover {
+  border: #4567d6fd;
   transition: 0.4s ease;
   background: #4567d6fd;
+  transform: scale(1.01);
+
+}
+
+.btnLogin {
+  height: 45px;
+  padding: 8px 18px;
+  background: none;
+  border: 2px solid #3451b1;
+  border-radius: 8px;
+  color: #3451b1;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.btnLogin:hover {
+  color: white;
+  transition: 0.4s ease;
+  background: #3451b1;
   transform: scale(1.01);
 
 }

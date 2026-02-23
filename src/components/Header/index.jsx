@@ -100,9 +100,14 @@ export default function Header() {
       </ul>
 
       <div className="col-md-3 text-end">
+        <a href="/cadastro" className="me-2">
+          <button type="button" className="btnCadastro">
+            Cadastrar
+          </button>
+        </a>
         <a href="/login">
           <button type="button" className="btnLogin">
-            Sign-up
+            Entrar
           </button>
         </a>
       </div>

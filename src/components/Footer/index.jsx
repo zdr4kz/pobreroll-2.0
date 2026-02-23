@@ -3,7 +3,7 @@ import "./footer.css";
 export default function Footer(){
     return(<>
     
-    <div className="container">
+    <div className="container ">
   {" "}
   <footer className="py-3 my-4">
     {" "}
