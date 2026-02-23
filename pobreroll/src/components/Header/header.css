@@ -30,7 +30,7 @@
 
 .btnLogin {
   padding: 8px 18px;
-  background: #53bde7;
+  background: #3451b1;
   border: none;
   border-radius: 8px;
   color: white;
@@ -41,7 +41,7 @@
 
 .btnLogin:hover {
   transition: 0.4s ease;
-  background: #167ba3;
+  background: #4567d6fd;
   transform: scale(1.01);
 
 }
@@ -59,9 +59,72 @@
   color: rgba(255, 255, 255, 0.6) !important;
 }
 
+.p0{
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+  /* background-color: yellowgreen; */
+}
+
 
 @media (max-width: 768px) {
-  header {
-    display: none !important;
+  .desktop-header {
+    display: none !important;           
+  }
+}
+
+/* SE QUISER APAGAR ESSA NAVBAR DE BAIXO PRECISA TIRAR TODA A NAVBAR DO COMPONENT DO HEADER
+E APAGAR ALGUMAS PARTES DO CSS, TANTO DO HEADER NORMAL QUANTO DA NAVBAR!!! */
+
+
+/* css mobile */
+
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0.5px;   /* 👈 ISSO coloca embaixo */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 95px;
+
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+
+  background: rgb(31, 31, 31);
+  /* border-radius: 16px; */
+
+  z-index: 999;
+}
+
+.mobile-nav a {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+
+.mobile-nav a:hover {
+  transform: translateY(-3px);
+}
+
+.mobile-nav a.active {
+  background: rgba(255,255,255,0.2);
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: flex;
   }
 }

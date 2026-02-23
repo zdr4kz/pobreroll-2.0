@@ -40,14 +40,18 @@ export default function Header() {
 
   return (
     // aplica classe dinâmica para esconder ou mostrar
-    <header
-      className={`header ${showHeader ? "header-visible" : "header-hidden"}
+    <>
+    
+     <header
+      className={`header desktop-header ${showHeader ? "header-visible" : "header-hidden"}
       ${scrolled ? "header-scrolled" : ""}
       d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3`}
     >
       <div className="col-md-3 mb-2 mb-md-0 ms-5">
-        <a href="/" className="logo">
-          NomeDoStreaming
+        <a href="">
+          <div className="d-flex bg-dannger p0">
+            <img src="/lumos.png" alt="" />
+          </div>
         </a>
       </div>
 
@@ -96,10 +100,42 @@ export default function Header() {
       </ul>
 
       <div className="col-md-3 text-end">
-        <button type="button" className="btnLogin">
-          Sign-up
-        </button>
+        <a href="/login">
+          <button type="button" className="btnLogin">
+            Sign-up
+          </button>
+        </a>
       </div>
+
     </header>
+    
+      <nav className="mobile-nav">
+        <a href="/" className={pathname === "/" ? "active" : ""}>
+          <i className="bi bi-house"></i>
+        </a>
+
+        <a href="/pesquisar" className={pathname === "/pesquisar" ? "active" : ""}>
+          <i className="bi bi-search"></i>
+        </a>
+
+        <a href="/series" className={pathname === "/series" ? "active" : ""}>
+          <i className="bi bi-tv"></i>
+        </a>
+
+        <a href="/filmes" className={pathname === "/filmes" ? "active" : ""}>
+          <i className="bi bi-film"></i>
+        </a>
+
+        <a href="/login">
+          <i className="bi bi-person"></i>
+        </a>
+      </nav>
+
+    
+    </>
+   
+
+
+
   );
 }

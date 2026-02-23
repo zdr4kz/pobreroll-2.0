@@ -1,8 +1,11 @@
+import {shows} from "@/data/shows";
 import Image from "next/image";
 import styles from "./page.module.css";
 import "./home.css";
+import DragCarousel from "@/components/Carrossel";
 
 export default function Home() {
+
   return (
     <>
       <main>
@@ -19,35 +22,14 @@ export default function Home() {
           </div>
         </div>
 
-        <section>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio</h1>
-    <h1>sapofjsdiohsdio     </h1>
+        <section className="s1 bg-dark p-3"style={{ height: "4200px" }}>
+
+          <div className="">
+            <h3 className="text-white ps-3 pt-2">Animações para toda a família</h3>
+            <DragCarousel/>
+
+          </div>
+
         </section>
 
 
