@@ -24,7 +24,7 @@ const Input = () => {
                                         <input required type="text" name="text" autoComplete="off" className="input" />
                                         <label className="user-label">Senha</label>
                                     </div>
-                                    <button className="subscribe-button w-100" type="submit">Subscribe</button>
+                                    <button className="subscribe-button w-100 rounded" type="submit">Entrar</button>
                                 </div>
                             </form>
                             <div className="success-message" id="successMessage">
