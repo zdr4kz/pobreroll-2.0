@@ -4,7 +4,7 @@ class CatalogoModel{
 
     static async listasTodos() {
         try{
-            const todos = await read("movies")
+            const todos = await read("filmes")
             console.log(todos)
             return todos
         }catch (err) {
