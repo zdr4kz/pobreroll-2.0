@@ -9,6 +9,7 @@ class CatalogoModel{
             return todos
         }catch (err) {
             console.error("não foi possivel listar a tabela dos filmes")
+            return err
         }
     }
 }
