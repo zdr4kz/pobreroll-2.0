@@ -1,0 +1,36 @@
+body{
+    background: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+    color: white;
+}
+
+.pesquisa{
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+}
+
+.inputPesquisa{
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+}
+
+.inputPesquisa:focus {
+    outline: none;
+    /* Define sua nova borda (cor, espessura, estilo) */
+}
+
+.cardFilme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+.cardFilme:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+}
