@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const Input = () => {
     return (
+
         <StyledWrapper>
             <div className="container-fluid row d-flex justify-content-center align-items-center ">
                 <div className="col-12 col-lg-5 col-login ">
@@ -46,7 +47,8 @@ const Input = () => {
                 <div className="col-7 d-none d-lg-flex "></div>
             </div>
         </StyledWrapper>
-    );
+    
+  );
 }
 
 const StyledWrapper = styled.div`
@@ -59,7 +61,7 @@ const StyledWrapper = styled.div`
   .nebula-input .input {
     width: 100%;
     padding: 15px;
-    border: 2px solid #2a2a3a;
+    border: 2px solid #3451b1;
     background: #00000f;
     color: white;
     font-size: 16px;
@@ -75,12 +77,12 @@ const StyledWrapper = styled.div`
     pointer-events: none;
     color: #6a6a8a;
     transition: all 0.4s ease-out;
-    background: #00000f;
+    background: #3451b1;
     padding: 0 5px;
   }
 
   .nebula-input .input:focus {
-    border-color: #80dafd;
+    border-color: #3451b1;
     box-shadow:
       0 5px 8px rgba(181, 106, 255, 0.3),
       0 10px 20px rgba(181, 106, 255, 0.2),
@@ -92,7 +94,7 @@ const StyledWrapper = styled.div`
   .nebula-input .input:valid ~ .user-label {
     transform: translateY(-25px);
     font-size: 12px;
-    color: #80dafd;
+    color: #3451b1;
     left: 10px;
   }
 
@@ -118,7 +120,7 @@ const StyledWrapper = styled.div`
     0% {
       transform: translate(0, -50%) scale(0.8);
       opacity: 0;
-      background: #80dafd;
+      background: #3451b1;
     }
     20% {
       opacity: 0.8;
@@ -127,7 +129,7 @@ const StyledWrapper = styled.div`
       transform: translate(calc(var(--x) * 140px), calc(var(--y) * 35px))
         scale(1.1);
       opacity: 0;
-      background: #6df2ff;
+      background: #3451b1;
     }
   }
    /* ==================== General Styles ==================== */
@@ -181,7 +183,7 @@ const StyledWrapper = styled.div`
   .nebula-input .input {
     width: 100%;
     padding: 12px 12px 12px 40px;
-    border: 2px solid #2a2a3a;
+    border: 2px solid #3451b1;
     background: #00000f;
     color: white;
     font-size: 16px;
@@ -204,7 +206,7 @@ const StyledWrapper = styled.div`
   }
 
   .nebula-input .input:focus {
-    border-color: #80dafd;
+    border-color: #3451b1;
     box-shadow:
      0 5px 8px rgba(106, 245, 255, 0.3),
       0 10px 20px rgba(106, 233, 255, 0.2),
@@ -216,7 +218,7 @@ const StyledWrapper = styled.div`
   .nebula-input .input:valid ~ .user-label {
     transform: translateY(-25px);
     font-size: 12px;
-    color: #80dafd;
+    color: #3451b1;
     left: 7px;
     background: #00000f;
   }
@@ -228,12 +230,12 @@ const StyledWrapper = styled.div`
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    fill: #6a6a8a;
+    fill: #3451b1;
     transition: fill 0.4s ease-out;
   }
 
   .nebula-input .input:focus ~ .email-icon {
-    fill: #80dafd;
+    fill: #3451b1;
   }
 
   .nebula-particle {
@@ -259,7 +261,7 @@ const StyledWrapper = styled.div`
     0% {
       transform: translate(0, -50%) scale(0.8);
       opacity: 0;
-      background: #80dafd;
+      background: #3451b1;
     }
     20% {
       opacity: 0.8;
@@ -268,7 +270,7 @@ const StyledWrapper = styled.div`
       transform: translate(calc(var(--x) * 140px), calc(var(--y) * 35px))
         scale(1.1);
       opacity: 0;
-      background: #6df2ff;
+      background: #3451b1;
     }
   }
 
@@ -277,9 +279,9 @@ const StyledWrapper = styled.div`
     padding: 12px 16px;
     font-size: 16px;
     font-weight: bold;
-    color: #80dafd;
+    color: #3451b1;
     background: #00000f;
-    border: 2px solid #80dafd;
+    border: 2px solid #3451b1;
     border-radius: 8px;
     cursor: pointer;
     outline: none;
@@ -290,7 +292,7 @@ const StyledWrapper = styled.div`
   .subscribe-button:focus {
     background: #80dafd;
     color: #fff;
-    border-color: #a2e0f8;
+    border-color: #3451b1;
     box-shadow:
       0 5px 8px rgba(106, 245, 255, 0.3),
       0 10px 20px rgba(106, 233, 255, 0.2),
@@ -331,7 +333,7 @@ const StyledWrapper = styled.div`
 
   .success-message .success-title {
     font-size: 24px;
-    color: #80dafd;
+    color: #3451b1;
     margin-bottom: 10px;
     animation: fade-in-up 0.5s ease-out 1.2s forwards;
     opacity: 0;
@@ -339,7 +341,7 @@ const StyledWrapper = styled.div`
 
   .success-message .success-subtitle {
     font-size: 16px;
-    color: #80dafd;
+    color: #3451b1;
     animation: fade-in-up 0.5s ease-out 1.4s forwards;
     opacity: 0;
   }
@@ -361,7 +363,7 @@ const StyledWrapper = styled.div`
     stroke-dashoffset: 166;
     stroke-width: 2;
     stroke-miterlimit: 10;
-    stroke: #80dafd;
+    stroke: #3451b1;
     fill: none;
     animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
   }
@@ -370,7 +372,7 @@ const StyledWrapper = styled.div`
     transform-origin: 50% 50%;
     stroke-dasharray: 48;
     stroke-dashoffset: 48;
-    stroke: #80dafd;
+    stroke: #3451b1;
     animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
   }
 
