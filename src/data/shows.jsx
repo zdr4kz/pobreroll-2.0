@@ -288,5 +288,14 @@ export const shows = [
     categories: ["Ficção Científica", "Aventura", "Drama"],
     image: "https://i0.wp.com/quintacapa.com.br/wp-content/uploads/2021/10/duna-warner-bros-quinta-capa-destaque.png?fit=1250%2C650&ssl=1",
     banner: "https://image.tmdb.org/t/p/original/iopYFB1b6Bh7FWZh3onQhph1sih.jpg"
+  },
+  {
+    id: 31,
+    title: "Interestelar",
+    type: "Filme",
+    time: "2h 35m",
+    rating: "10+",
+    categories: ["Ficção Científica", "Aventura", "Drama"],
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimUBDlX10lXuPQPZndwvcF9QXKwF_bgj1gAk7OX1krOEPeLgm6bjKisyWjO-dz62qU54m3j2urLrE22N7pnslqovPg6X199HhLcjvVJGfU1wZtRvk7Q4YpIguozmRtFlDfOeWJs5b9zEY/s1600/Interstellar.jpg",
   }
 ];
