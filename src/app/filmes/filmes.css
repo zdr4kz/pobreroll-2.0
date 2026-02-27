@@ -1,0 +1,17 @@
+body{
+    background: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+    color: white;
+}
+
+.cardFilme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+.cardFilme:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+}

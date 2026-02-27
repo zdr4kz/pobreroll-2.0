@@ -2,14 +2,20 @@ import { read } from "@/lib/db"
 
 class CatalogoModel{
 
-    static async listasTodos() {
+    static async listarTodos() {
         try{
-            const todos = await read("filmes")
-            console.log(todos)
-            return todos
+            const todos = await read("catalogo")
+            return {
+                sucesso: true,
+                data: todos
+            }
         }catch (err) {
             console.error("não foi possivel listar a tabela dos filmes")
-            return err
+            return {
+                sucesso: false,
+                mensagem: "Erro ao listar os filmes",
+                erro: err.message
+            }
         }
     }
 }
