@@ -1,0 +1,257 @@
+
+.cw-header {
+  padding: 12px 24px 20px;
+}
+
+.cw-title {
+  color: #fff;
+  margin: 0;
+}
+
+/* ===== WRAPPER ===== */
+.cw-wrapper {
+  position: relative;
+}
+
+/* ===== TRACK (scroll) ===== */
+.cw-track {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px 24px 24px;
+  user-select: none;
+}
+
+.cw-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== CARD ===== */
+.cw-card {
+  flex: 0 0 auto;
+  width: 260px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.cw-card.is-hovered {
+  transform: scale(1.05);
+  z-index: 20;
+}
+
+/* animação de saída ao remover */
+.cw-card.is-removing {
+  transform: scale(0.88);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* ===== THUMBNAIL ===== */
+.cw-thumb {
+  position: relative;
+  width: 100%;
+  height: 148px;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.cw-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cw-card.is-hovered .cw-thumb img {
+  transform: scale(1.05);
+}
+
+/* gradiente sobre a thumb */
+.cw-thumb-grad {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15) 0%,
+    transparent 40%,
+    rgba(0,0,0,0.55) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cw-card.is-hovered .cw-thumb-grad {
+  opacity: 1;
+}
+
+/* ── botão remover (X) ── */
+.cw-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.2s, transform 0.2s, background 0.2s;
+}
+
+.cw-remove svg {
+  width: 11px;
+  height: 11px;
+}
+
+.cw-card.is-hovered .cw-remove {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cw-remove:hover {
+  background: rgba(220, 40, 40, 0.8);
+  border-color: transparent;
+}
+
+/* ── play overlay central ── */
+.cw-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.cw-card.is-hovered .cw-play-overlay {
+  opacity: 1;
+}
+
+.cw-play-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  border: none;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.cw-play-btn:hover {
+  transform: scale(1.1);
+  background: #fff;
+}
+
+.cw-play-btn svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+}
+
+/* ===== BARRA DE PROGRESSO ===== */
+.cw-progress-bar {
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.cw-progress-fill {
+  height: 100%;
+  background: #e50914;
+  border-radius: 0;
+  transition: width 0.4s ease;
+}
+
+/* ===== INFO ===== */
+.cw-info {
+  background: #141414;
+  border-radius: 0 0 6px 6px;
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cw-show-title {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cw-episode {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cw-time {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.35);
+  margin: 0;
+}
+
+/* ===== SETAS ===== */
+.cw-arrow {
+  position: absolute;
+  top: 0;
+  height: 164px; /* altura da thumb + progress bar */
+  z-index: 10;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 32px;
+  width: 46px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cw-arrow.left  { left: 0;  background: linear-gradient(to right, rgba(10,10,10,0.9), transparent); }
+.cw-arrow.right { right: 0; background: linear-gradient(to left,  rgba(10,10,10,0.9), transparent); }
+
+.cw-wrapper:hover .cw-arrow {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .cw-arrow   { display: none; }
+  .cw-card    { width: 180px; }
+  .cw-thumb   { height: 105px; }
+}
