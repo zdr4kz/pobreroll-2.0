@@ -4,7 +4,7 @@ import { shows } from "@/data/shows";
 import { useRef, useState, useEffect } from "react";
 import "./carousel.css";
 
-export default function DragCarousel() {
+export default function CarouselNovidades() {
   const carouselRef = useRef(null);
 
   const [isDown, setIsDown] = useState(false);
@@ -65,34 +65,37 @@ export default function DragCarousel() {
   };
 
   return (
-    <div className="carousel-wrapper">
-
-      {canScrollLeft && (
-        <button className="arrow left" onClick={() => scroll("left")}>
-          ‹
-        </button>
-      )}
-
-      <div
-        className="carousel-container"
-        ref={carouselRef}
-        onMouseDown={handleMouseDown}
-        onMouseUp={stopDragging}
-        onMouseLeave={stopDragging}
-        onMouseMove={handleMouseMove}
-      >
-        {shows.map((card) => (
-          <div className="card carousel-card" key={card.id}>
-            <img src={card.image} alt={card.title} />
-          </div>
-        ))}
+    <>
+      <div className="t10-header text-white">
+        <h1>Novidades</h1>
       </div>
+      <div className="carousel-wrapper">
+        <div
+          className="carousel-container"
+          ref={carouselRef}
+          onMouseDown={handleMouseDown}
+          onMouseUp={stopDragging}
+          onMouseLeave={stopDragging}
+          onMouseMove={handleMouseMove}
+        >
+          {shows.slice(19, 28).map((card) => (
+            <div className="card carousel-card" key={card.id}>
+              <img src={card.image} alt={card.title} draggable={false} />
 
-      {canScrollRight && (
-        <button className="arrow right" onClick={() => scroll("right")}>
-          ›
-        </button>
-      )}
-    </div>
+              {/* OVERLAY com título e tipo */}
+              <div className="c-overlay">
+                <p className="c-overlay-title">{card.title}</p>
+                <p className="c-overlay-genre">{card.type}</p>
+              </div>
+
+              {/* PLAY BUTTON */}
+              <div className="c-play">
+                <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" /></svg>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
