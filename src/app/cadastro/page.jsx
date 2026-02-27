@@ -30,7 +30,7 @@ const Input = () => {
 
     localStorage.setItem('usuario', JSON.stringify(formData));
     alert("Cadastro bem-sucedido!");
-    window.location.href = "/Login";
+    window.location.href = "/login";
   }
 
     return (
@@ -50,7 +50,7 @@ const Input = () => {
                                         </svg>
                                     </div>
                                     <div className="nebula-input w-100">
-                                        <input required type="text" name="senha" autoComplete="off" className="input" value={formData.senha} onChange={handleChange} />
+                                        <input required type="password" name="senha" autoComplete="off" className="input" value={formData.senha} onChange={handleChange} />
                                         <label className="user-label" >Senha</label>
                                     </div>
                                     <button className="subscribe-button w-100 rounded" type="submit">Cadastrar</button>
@@ -125,6 +125,7 @@ const StyledWrapper = styled.div`
     left: 10px;
   }
 
+ 
   .nebula-particle {
     position: absolute;
     width: 6px;
