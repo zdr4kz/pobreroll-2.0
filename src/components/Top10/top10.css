@@ -84,8 +84,8 @@
  /* poster */
  .t10-poster {
    position: relative;
-   width: 130px;
-   height: 195px;
+   width: 280px;
+   height: 165px;
    border-radius: 6px;
    overflow: hidden;
    flex-shrink: 0;

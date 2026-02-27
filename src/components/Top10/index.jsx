@@ -3,7 +3,11 @@
 import "./top10.css";
 import { shows} from "@/data/shows";
 
-const top10 = shows.slice(8, 18);
+const top10Ids = [17, 10, 3, 5, 2, 16, 12, 6, 9, 4];
+
+const top10 = top10Ids.map(id =>
+  shows.find(show => show.id === id)
+);
 import { useRef, useState, useEffect } from "react";
 
 export default function Top10Carousel() {
