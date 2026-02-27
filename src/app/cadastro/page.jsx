@@ -30,7 +30,7 @@ const Input = () => {
 
     localStorage.setItem('usuario', JSON.stringify(formData));
     alert("Cadastro bem-sucedido!");
-    window.location.href = "/login";
+    window.location.href = "/Login";
   }
 
     return (
@@ -54,7 +54,7 @@ const Input = () => {
                                         <label className="user-label" >Senha</label>
                                     </div>
                                     <button className="subscribe-button w-100 rounded" type="submit">Cadastrar</button>
-                                    <p>Já tem uma conta? <a href="/login" className="link">Entrar!</a></p>
+                                    <p>Já tem uma conta? <a href="/Login" className="link">Entrar!</a></p>
                                 </div>
                             </form>
                             <div className="success-message" id="successMessage">

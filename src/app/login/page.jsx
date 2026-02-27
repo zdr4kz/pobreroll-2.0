@@ -26,6 +26,7 @@ const Input = () => {
       alert("Login bem-sucedido! Bem-vindo de volta!");
       usuarioDB.logado = true;
       localStorage.setItem('usuario', JSON.stringify(usuarioDB));
+      window.location.href = "/"; // Redireciona para a página inicial
     } else {
       e.preventDefault();
       alert("Email ou senha incorretos. Por favor, tente novamente.");
