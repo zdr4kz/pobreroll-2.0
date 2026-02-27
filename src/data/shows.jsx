@@ -101,7 +101,7 @@ export const shows = [
     type: "Série",
     seasons: 2,
     rating: "14+",
-    image: "https://image.tmdb.org/t/p/w500/lHtSh6trTMCaLrKXvZEVhP9ooRu.jpg"
+    image: "https://m.media-amazon.com/images/S/pv-target-images/8e8cb3cd8e4355bd633f48c08c887b9914e1388d16eb9d8963b8fde1351383c5.jpg"
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ export const shows = [
     type: "Série",
     seasons: 4,
     rating: "16+",
-    image: "https://image.tmdb.org/t/p/w500/e2X8g0vBq6HQTL42nIzFa8GBCum.jpg"
+    image: "https://preview.redd.it/series-like-succession-v0-g2iu3q1fwi1e1.jpeg?width=640&crop=smart&auto=webp&s=55600dd9125aa3d8d90ff949484b1929ee1aad5d"
   },
   {
     id: 15,

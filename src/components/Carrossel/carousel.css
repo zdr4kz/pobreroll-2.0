@@ -1,77 +1,81 @@
- @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500&display=swap');
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500&display=swap');
 
- .t10 {
-   display: flex;
-   align-items: baseline;
-   gap: 12px;
-   padding: 0 14px 10px;
- }
+/* ===== HEADER ===== */
+.t10 {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 0 14px 10px;
+}
 
+/* ===== WRAPPER ===== */
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 
- /* ===== WRAPPER ===== */
- .carousel-wrapper {
-   position: relative;
-   width: 100%;
-   overflow: hidden;
-   /* impede vazamento lateral */
- }
+/* ===== SCROLL CONTAINER ===== */
+.carousel-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 12px 24px 20px;
+  user-select: none;
+}
 
- /* ===== CONTAINER SCROLL ===== */
- .carousel-container {
-   display: flex;
-   gap: 16px;
-   overflow-x: auto;
-   scroll-behavior: smooth;
-   padding: 12px 24px 20px;
-   user-select: none;
-   /* evita selecionar texto ao arrastar */
- }
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
 
- .carousel-container::-webkit-scrollbar {
-   display: none;
- }
+/* ===== CARD ===== */
+.carousel-card {
+  flex: 0 0 280px;
+  height: 165px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #111;
+  display: flex;
+  flex-direction: column;
 
- /* ===== CARD ===== */
- .carousel-card {
-   min-width: 280px;
-   height: 165px;
-   flex: 0 0 auto;
-   border-radius: 8px;
-   cursor: pointer;
-   background: #111;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
 
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
+.carousel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
 
-   display: flex;
-   flex-direction: column;
- }
+/* ===== IMAGE ===== */
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
 
- /* efeito ao passar mouse */
- .carousel-card:hover {
-   transform: scale(1.05);
-   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
- }
+/* ===== ARROWS ===== */
+.arrow {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
 
- /* ===== IMAGEM ===== */
- .carousel-card img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   pointer-events: none;
-   /* melhora o drag */
- }
+.carousel-wrapper:hover .arrow {
+  opacity: 1;
+  pointer-events: auto;
+}
 
- /* ===== SETAS ===== */
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .arrow {
+    display: none;
+  }
 
- /* MOSTRAR setas ao passar mouse no carrossel */
- .carousel-wrapper:hover .arrow {
-   opacity: 1;
-   pointer-events: auto;
- }
-
- /* esconder no mobile */
- @media (max-width: 768px) {
-   .arrow {
-     display: none;
-   }
- }
+  .carousel-card {
+    flex: 0 0 220px;
+    height: 130px;
+  }
+}

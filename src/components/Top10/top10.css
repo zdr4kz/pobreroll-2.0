@@ -12,10 +12,9 @@
    padding: 0 24px 20px;
  }
 
- .t10-header h2 {
+ .t10-header  {
    font-family: 'Bebas Neue', sans-serif;
-   font-size: clamp(1.6rem, 3vw, 2.2rem);
-   letter-spacing: 0.06em;
+   font-size: 40px !important;
    color: #fff;
    margin: 0;
  }

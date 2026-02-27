@@ -3,6 +3,12 @@
 ================================*/
 html, body {
   overflow-x: hidden;
+  background-color: #212529;
+}
+
+.home-section{
+  background-color: #212529;
+  padding: 10px;
 }
 
 /* ==================

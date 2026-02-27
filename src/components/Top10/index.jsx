@@ -52,7 +52,7 @@ export default function Top10Carousel() {
 
       <section className="t10-section">
         <div className="t10-header">
-          <h2>Top 10</h2>
+          <h1>Top 10</h1>
           <span>de hoje</span>
         </div>
 

@@ -4,7 +4,7 @@ import { shows } from "@/data/shows";
 import { useRef, useState, useEffect } from "react";
 import "./carousel.css";
 
-export default function DragCarousel() {
+export default function CarouselKids() {
   const carouselRef = useRef(null);
 
   const [isDown, setIsDown] = useState(false);
