@@ -30,7 +30,7 @@ const Input = () => {
 
     localStorage.setItem('usuario', JSON.stringify(formData));
     alert("Cadastro bem-sucedido!");
-    window.location.href = "/Login";
+    window.location.href = "/login";
   }
 
     return (
