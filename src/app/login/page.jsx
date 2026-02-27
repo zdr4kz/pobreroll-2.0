@@ -33,8 +33,7 @@ const Input = () => {
     }
   }
 
-    return (
-
+    return (    
         <StyledWrapper>
             <div className="container-fluid row d-flex justify-content-center align-items-center ">
                 <div className="col-12 col-lg-5 col-login ">
@@ -51,7 +50,7 @@ const Input = () => {
                                         </svg>
                                     </div>
                                     <div className="nebula-input w-100">
-                                        <input required type="password" name="senha" autoComplete="off" className="input" value={senha} onChange={(e) => setSenha(e.target.value)}/>
+                                        <input required type="text" name="text" autoComplete="off" className="input" />
                                         <label className="user-label">Senha</label>
                                     </div>
                                     <button className="subscribe-button w-100 rounded" type="submit">Entrar</button>
@@ -76,8 +75,7 @@ const Input = () => {
                 <div className="col-7 d-none d-lg-flex "></div>
             </div>
         </StyledWrapper>
-    
-  );
+    );
 }
 
 const StyledWrapper = styled.div`
@@ -526,4 +524,5 @@ const StyledWrapper = styled.div`
       padding: 5px;
     }
   }`;
+
 export default Input;
