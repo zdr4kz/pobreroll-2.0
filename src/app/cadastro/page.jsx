@@ -1,28 +1,57 @@
+"use client"
+
 import "./cadastro.css"
+
 
 import React from 'react';
 import styled from 'styled-components';
+import { useState } from 'react';
+import Link from "next/link";
 
 const Input = () => {
+
+  const [formData, setFormData] = useState({
+    email: '',
+    senha: '',
+    logado: false
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const jsonDados = JSON.stringify(formData, null, 2);
+
+    localStorage.setItem('usuario', JSON.stringify(formData));
+    alert("Cadastro bem-sucedido!");
+    window.location.href = "/login";
+  }
+
     return (
         <StyledWrapper>
             <div className="container-fluid row d-flex justify-content-center align-items-center ">
                 <div className="col-12 col-lg-5 col-login ">
                     <div className="form-container">
                         <div className="newsletter-form-wrapper">
-                            <form className="newsletter-form w-75" id="newsletterForm" action="#successMessage">
+                            <form className="newsletter-form w-75" id="newsletterForm" action="#successMessage" onSubmit={handleSubmit}>
                                 <h1>CADASTRO</h1>
                                 <div className="input-group d-flex align-items-center justify-content-center flex-column">
                                     <div className="nebula-input w-100">
-                                        <input required type="email" name="email" autoComplete="off" className="input" />
+                                        <input required type="email" name="email" autoComplete="off" className="input" value={formData.email} onChange={handleChange} />
                                         <label className="user-label">Email Address</label>
                                         <svg className="email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                                         </svg>
                                     </div>
                                     <div className="nebula-input w-100">
-                                        <input required type="text" name="text" autoComplete="off" className="input" />
-                                        <label className="user-label">Senha</label>
+                                        <input required type="text" name="senha" autoComplete="off" className="input" value={formData.senha} onChange={handleChange} />
+                                        <label className="user-label" >Senha</label>
                                     </div>
                                     <button className="subscribe-button w-100 rounded" type="submit">Cadastrar</button>
                                     <p>Já tem uma conta? <a href="/login" className="link">Entrar!</a></p>

@@ -1,0 +1,316 @@
+/* ===== PÁGINA ===== */
+.sp-page {
+  min-height: 100vh;
+  background: #212529;
+  padding: 100px 24px 60px; /* top para não ficar atrás do header */
+}
+
+/* ===== BARRA DE BUSCA ===== */
+.sp-search-bar {
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.sp-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sp-search-icon {
+  position: absolute;
+  left: 16px;
+  width: 18px;
+  height: 18px;
+  color: rgba(255,255,255,0.4);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.sp-input {
+  width: 100%;
+  background: #1c1c1c;
+  border: 1.5px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 14px 48px 14px 48px;
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.sp-input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.sp-input:focus {
+  border-color: rgba(255,255,255,0.2);
+  background: #222;
+}
+
+/* botão limpar */
+.sp-clear {
+  position: absolute;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.sp-clear:hover { background: rgba(255,255,255,0.22); }
+
+.sp-clear svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* ===== FILTROS ===== */
+.sp-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.sp-filter-btn {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.sp-filter-btn:hover {
+  border-color: rgba(255,255,255,0.35);
+  color: #fff;
+}
+
+.sp-filter-btn.active {
+  background: #ffffff31;
+  border-color: #fff;
+  color: #0a0a0a;
+}
+
+/* ===== CONTAGEM ===== */
+.sp-count {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.35);
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+/* ===== GRID DE RESULTADOS ===== */
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+/* ===== CARD ===== */
+.sp-card {
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: visible;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1), z-index 0s;
+}
+
+.sp-card.is-hovered {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* ── thumb ── */
+.sp-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.sp-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  transition: transform 0.4s ease;
+}
+
+.sp-card.is-hovered .sp-thumb img {
+  transform: scale(1.06);
+}
+
+.sp-thumb-grad {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 45%, rgba(0,0,0,0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sp-card.is-hovered .sp-thumb-grad { opacity: 1; }
+
+/* ── badge classificação ── */
+.sp-rating {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.75);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: rgba(0,0,0,0.4);
+}
+
+/* ── play overlay ── */
+.sp-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.sp-card.is-hovered .sp-play-overlay { opacity: 1; }
+
+.sp-play-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  border: none;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+.sp-play-btn:hover { transform: scale(1.1); }
+
+.sp-play-btn svg {
+  width: 15px;
+  height: 15px;
+  margin-left: 3px;
+}
+
+/* ── info ── */
+.sp-info {
+  padding: 8px 2px 4px;
+}
+
+.sp-title {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sp-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sp-type,
+.sp-seasons {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.sp-dot {
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.2);
+}
+
+/* ===== ESTADO VAZIO (sem busca) ===== */
+.sp-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 0;
+  color: rgba(255,255,255,0.2);
+}
+
+.sp-empty svg {
+  width: 64px;
+  height: 64px;
+}
+
+.sp-empty p {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ===== SEM RESULTADOS ===== */
+.sp-no-results {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.sp-no-results-title {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 8px;
+}
+
+.sp-no-results-sub {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.3);
+  margin: 0;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .sp-page {
+    padding: 80px 16px 40px;
+  }
+
+  .sp-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 6px;
+  }
+}

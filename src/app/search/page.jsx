@@ -24,7 +24,7 @@ export default function SearchPage() {
 
   const hasQuery    = query.trim().length > 0;
   // mostra resultados se: digitou algo OU selecionou um filtro específico (não "Todos")
-  const showResults = hasQuery || rating !== "Todos";
+  const showResults = hasQuery || rating;
 
   return (
     <div className="sp-page">
