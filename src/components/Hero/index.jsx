@@ -6,10 +6,9 @@ export default function Hero() {
         <div className="hero">
             <div className="row">
                 <div className="col-lg-10 col-md-8 col-12 overlay">
-                    <h1>Interestelar</h1>
+                    <h1>Zootopia 2</h1>
                     <p>
-                        Uma equipe de exploradores viaja através de um buraco de minhoca no espaço
-                        na tentativa de garantir a sobrevivência da humanidade.
+                        Uma coelha policial e uma raposa vigarista investigam um desaparecimento que ameaça a paz da cidade de Zootopia.
                     </p>
                     <button className="btn0">Assistir</button>
                 </div>

@@ -5,7 +5,7 @@ export default function Footer(){
     
         <footer className="footer-wrap bg-dark">
         <div className="footer-inner">
-          <span className="footer-brand">Company</span>
+          <span className="footer-brand">Lumos</span>
 
         {/*   <ul className="footer-nav">
             {links.map((link) => (

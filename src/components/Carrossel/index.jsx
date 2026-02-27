@@ -65,34 +65,26 @@ export default function DragCarousel() {
   };
 
   return (
-    <div className="carousel-wrapper">
-
-      {canScrollLeft && (
-        <button className="arrow left" onClick={() => scroll("left")}>
-          ‹
-        </button>
-      )}
-
-      <div
-        className="carousel-container"
-        ref={carouselRef}
-        onMouseDown={handleMouseDown}
-        onMouseUp={stopDragging}
-        onMouseLeave={stopDragging}
-        onMouseMove={handleMouseMove}
-      >
-        {shows.map((card) => (
-          <div className="card carousel-card" key={card.id}>
-            <img src={card.image} alt={card.title} />
-          </div>
-        ))}
+    <>
+      <div className="t10-header text-white">
+        <h1>Para toda a familia</h1>
       </div>
-
-      {canScrollRight && (
-        <button className="arrow right" onClick={() => scroll("right")}>
-          ›
-        </button>
-      )}
-    </div>
+      <div className="carousel-wrapper">
+        <div
+          className="carousel-container"
+          ref={carouselRef}
+          onMouseDown={handleMouseDown}
+          onMouseUp={stopDragging}
+          onMouseLeave={stopDragging}
+          onMouseMove={handleMouseMove}
+        >
+          {shows.slice(0, 8).map((card) => (
+            <div className="card carousel-card" key={card.id}>
+              <img src={card.image} alt={card.title} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

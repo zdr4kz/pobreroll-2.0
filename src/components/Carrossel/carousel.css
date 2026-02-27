@@ -1,94 +1,77 @@
-/* ===== WRAPPER ===== */
-.carousel-wrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden; /* impede vazamento lateral */
-}
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500&display=swap');
 
-/* ===== CONTAINER SCROLL ===== */
-.carousel-container {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 10px;
-  user-select: none; /* evita selecionar texto ao arrastar */
-}
+ .t10 {
+   display: flex;
+   align-items: baseline;
+   gap: 12px;
+   padding: 0 14px 10px;
+ }
 
-.carousel-container::-webkit-scrollbar {
-  display: none;
-}
 
-/* ===== CARD ===== */
-.carousel-card {
-  min-width: 280px;
-  height: 165px;
-  flex: 0 0 auto;
-  border-radius: 8px;
-  cursor: pointer;
-  background: #111;
+ /* ===== WRAPPER ===== */
+ .carousel-wrapper {
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+   /* impede vazamento lateral */
+ }
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ /* ===== CONTAINER SCROLL ===== */
+ .carousel-container {
+   display: flex;
+   gap: 16px;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   padding: 12px 24px 20px;
+   user-select: none;
+   /* evita selecionar texto ao arrastar */
+ }
 
-  display: flex;
-  flex-direction: column;
-}
+ .carousel-container::-webkit-scrollbar {
+   display: none;
+ }
 
-/* efeito ao passar mouse */
-.carousel-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
+ /* ===== CARD ===== */
+ .carousel-card {
+   min-width: 280px;
+   height: 165px;
+   flex: 0 0 auto;
+   border-radius: 8px;
+   cursor: pointer;
+   background: #111;
 
-/* ===== IMAGEM ===== */
-.carousel-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none; /* melhora o drag */
-}
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-/* ===== SETAS ===== */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
+   display: flex;
+   flex-direction: column;
+ }
 
-  background: rgba(0, 0, 0, 0);
-  border: none;
-  color: white;
-  font-size: 32px;
+ /* efeito ao passar mouse */
+ .carousel-card:hover {
+   transform: scale(1.05);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+ }
 
-  width: 46px;
-  height: 165px;
+ /* ===== IMAGEM ===== */
+ .carousel-card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   pointer-events: none;
+   /* melhora o drag */
+ }
 
-  cursor: pointer;
-  transition: opacity 0.25s ease, background 0.2s ease;
+ /* ===== SETAS ===== */
 
-  /* escondidas por padrão */
-  opacity: 0;
-  pointer-events: none;
-}
+ /* MOSTRAR setas ao passar mouse no carrossel */
+ .carousel-wrapper:hover .arrow {
+   opacity: 1;
+   pointer-events: auto;
+ }
 
-/* posição */
-.arrow.left { left: 0; }
-.arrow.right { right: 0; }
-
-/* hover nas setas */
-.arrow:hover {
-  background: rgba(0, 0, 0, 0.404);
-}
-
-/* MOSTRAR setas ao passar mouse no carrossel */
-.carousel-wrapper:hover .arrow {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* esconder no mobile */
-@media (max-width: 768px) {
-  .arrow {
-    display: none;
-  }
-}
+ /* esconder no mobile */
+ @media (max-width: 768px) {
+   .arrow {
+     display: none;
+   }
+ }
