@@ -1,7 +1,7 @@
 export const shows = [
   {
     id: 1,
-    title: "Adventure Time",
+    title: "Hora de Aventura",
     type: "Série",
     seasons: 10,
     rating: "10+",

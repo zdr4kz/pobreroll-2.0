@@ -48,11 +48,8 @@ function AuthWrapper({ children }) {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" className={`${bebasNeue.variable} ${outfit.variable}`}>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* O Suspense evita erros de renderização do usePathname no servidor */}
-        <Suspense fallback={<div>Carregando...</div>}>
-          <AuthWrapper>{children}</AuthWrapper>
-        </Suspense>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>        
+        <AuthWrapper>{children}</AuthWrapper>
       </body>
     </html>
   );
