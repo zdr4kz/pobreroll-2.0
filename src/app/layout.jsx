@@ -8,7 +8,7 @@ import { useEffect, useState, Suspense } from "react";
 import { usePathname } from "next/navigation"; // ✅ IMPORTAÇÃO CORRETA
 
 // Componentes
-import Login from "@/app/Login/page";
+import Login from "@/app/login/page";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
