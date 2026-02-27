@@ -48,7 +48,7 @@ export default function Header() {
       d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3`}
     >
       <div className="col-md-3 mb-2 mb-md-0 ms-5">
-        <a href="">
+        <a href="/">
           <div className="d-flex bg-dannger p0">
             <img src="/lumos.png" alt="" />
           </div>
@@ -69,7 +69,7 @@ export default function Header() {
 
         <li>
           <a
-            href="/pesquisar"
+            href="/search"
             className={`nav-link px-2 ${pathname === "/pesquisar" ? "active" : "inactive"}`}
           >
             <i className="bi bi-search me-2 fs-6"></i>
