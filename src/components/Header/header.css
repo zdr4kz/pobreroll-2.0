@@ -1,0 +1,151 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  color: white;
+  z-index: 100; transition: transform 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* visível */
+.header-visible {
+  transform: translateY(0);
+}
+
+/* escondido */
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+/* 👇 quando rolar a página */
+.header-scrolled {
+  background: rgba(15, 15, 15, 0.123);
+  backdrop-filter: blur(12px);
+}
+
+.hero {
+  position: relative;
+}
+
+.btnCadastro {
+  height: 45px;
+  padding: 8px 18px;
+  border: 2px solid #3451b1;
+  background: #3451b1;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.btnCadastro:hover {
+  border: #4567d6fd;
+  transition: 0.4s ease;
+  background: #4567d6fd;
+  transform: scale(1.01);
+
+}
+
+.btnLogin {
+  height: 45px;
+  padding: 8px 18px;
+  background: none;
+  border: 2px solid #3451b1;
+  border-radius: 8px;
+  color: #3451b1;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.btnLogin:hover {
+  color: white;
+  transition: 0.4s ease;
+  background: #3451b1;
+  transform: scale(1.01);
+
+}
+
+.nav-link {
+  transition: 0.3s;
+}
+
+.active {
+  color: white !important;
+  font-weight: bold;
+}
+
+.inactive {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.p0{
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+  /* background-color: yellowgreen; */
+}
+
+
+@media (max-width: 768px) {
+  .desktop-header {
+    display: none !important;           
+  }
+}
+
+/* SE QUISER APAGAR ESSA NAVBAR DE BAIXO PRECISA TIRAR TODA A NAVBAR DO COMPONENT DO HEADER
+E APAGAR ALGUMAS PARTES DO CSS, TANTO DO HEADER NORMAL QUANTO DA NAVBAR!!! */
+
+
+/* css mobile */
+
+
+.mobile-nav {
+  position: fixed;
+  bottom: 0.5px;   /* 👈 ISSO coloca embaixo */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 94px;
+
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(31, 31, 31);
+  /* border-radius: 16px; */
+  z-index: 999;
+}
+
+.mobile-nav a {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+
+.mobile-nav a:hover {
+  transform: translateY(-3px);
+}
+
+.mobile-nav a.active {
+  background: rgba(255,255,255,0.2);
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: flex;
+  }
+}
