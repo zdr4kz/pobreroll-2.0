@@ -29,7 +29,7 @@ export default function Home() {
       </section>
 
       <section className="home-section">
-        <CarrosselDrama title="Mistério" />
+        <CarrosselDrama title="Drama" />
       </section>
     </main>
   );
