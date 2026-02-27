@@ -13,6 +13,8 @@ const Input = () => {
 
 
   const handleLogin = (e) => {
+    e.preventDefault();
+    
     const cadastroNoSistema = localStorage.getItem('usuario');
     if(!cadastroNoSistema) {
       e.preventDefault();
