@@ -1,5 +1,8 @@
 .container-fluid {
     height: 100vh;
+
+
+
 }
 
 .col-login {
@@ -35,13 +38,13 @@
 }
 
 .link {
-    color: #3451b1;
+    color: #80dafd;
     text-decoration: none;
     background:
         linear-gradient(to right,
             transparent, transparent),
         linear-gradient(to right,
-            #3451b1);
+            #80dafd);
     background-size: 100% 3px, 0 3px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
