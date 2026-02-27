@@ -13,6 +13,8 @@ const Input = () => {
 
 
   const handleLogin = (e) => {
+    e.preventDefault();
+    
     const cadastroNoSistema = localStorage.getItem('usuario');
     if(!cadastroNoSistema) {
       e.preventDefault();
@@ -33,8 +35,7 @@ const Input = () => {
     }
   }
 
-    return (
-
+    return (    
         <StyledWrapper>
             <div className="container-fluid row d-flex justify-content-center align-items-center ">
                 <div className="col-12 col-lg-5 col-login ">
@@ -44,14 +45,14 @@ const Input = () => {
                                 <h1>LOGIN</h1>
                                 <div className="input-group d-flex align-items-center justify-content-center flex-column">
                                     <div className="nebula-input w-100">
-                                        <input required type="email" name="email" autoComplete="off" className="input" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                        <input required type="email" name="email" autoComplete="off" className="input " value={email} onChange={(e) => setEmail(e.target.value)} />
                                         <label className="user-label">Email Address</label>
                                         <svg className="email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                                         </svg>
                                     </div>
                                     <div className="nebula-input w-100">
-                                        <input required type="password" name="senha" autoComplete="off" className="input" value={senha} onChange={(e) => setSenha(e.target.value)}/>
+                                        <input required type="password" name="senha" autoComplete="off" className="input" value={senha} onChange={(e) => setSenha(e.target.value)} />
                                         <label className="user-label">Senha</label>
                                     </div>
                                     <button className="subscribe-button w-100 rounded" type="submit">Entrar</button>
@@ -76,8 +77,7 @@ const Input = () => {
                 <div className="col-7 d-none d-lg-flex "></div>
             </div>
         </StyledWrapper>
-    
-  );
+    );
 }
 
 const StyledWrapper = styled.div`
@@ -126,6 +126,8 @@ const StyledWrapper = styled.div`
     color: #80dafd;
     left: 10px;
   }
+  
+ 
 
   .nebula-particle {
     position: absolute;
@@ -526,4 +528,5 @@ const StyledWrapper = styled.div`
       padding: 5px;
     }
   }`;
+
 export default Input;
