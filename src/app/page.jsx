@@ -1,6 +1,5 @@
 import {shows} from "@/data/shows";
 import Image from "next/image";
-import styles from "./page.module.css";
 import "./home.css";
 import DragCarousel from "@/components/Carrossel";
 import Hero from "@/components/Hero";
