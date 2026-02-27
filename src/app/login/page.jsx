@@ -1,27 +1,55 @@
+"use client"
+
 import "./login.css"
 
-import React from 'react';
+import React, { useState, useEffect, use } from 'react';
 import styled from 'styled-components';
 
 const Input = () => {
+
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [erro, setErro] = useState('');
+
+
+  const handleLogin = (e) => {
+    const cadastroNoSistema = localStorage.getItem('usuario');
+    if(!cadastroNoSistema) {
+      e.preventDefault();
+      alert("Usuário não encontrado. Por favor, cadastre-se primeiro.");
+      return;
+    }
+
+    const usuarioDB = JSON.parse(cadastroNoSistema);
+
+    if(email === usuarioDB.email && senha === usuarioDB.senha) {
+      alert("Login bem-sucedido! Bem-vindo de volta!");
+      usuarioDB.logado = true;
+      localStorage.setItem('usuario', JSON.stringify(usuarioDB));
+    } else {
+      e.preventDefault();
+      alert("Email ou senha incorretos. Por favor, tente novamente.");
+    }
+  }
+
     return (
         <StyledWrapper>
             <div className="container-fluid row d-flex justify-content-center align-items-center ">
                 <div className="col-12 col-lg-5 col-login ">
                     <div className="form-container">
                         <div className="newsletter-form-wrapper">
-                            <form className="newsletter-form w-75" id="newsletterForm" action="#successMessage">
+                            <form className="newsletter-form w-75" id="newsletterForm" action="#successMessage" onSubmit={handleLogin}>
                                 <h1>LOGIN</h1>
                                 <div className="input-group d-flex align-items-center justify-content-center flex-column">
                                     <div className="nebula-input w-100">
-                                        <input required type="email" name="email" autoComplete="off" className="input" />
+                                        <input required type="email" name="email" autoComplete="off" className="input" value={email} onChange={(e) => setEmail(e.target.value)} />
                                         <label className="user-label">Email Address</label>
                                         <svg className="email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                                         </svg>
                                     </div>
                                     <div className="nebula-input w-100">
-                                        <input required type="text" name="text" autoComplete="off" className="input" />
+                                        <input required type="password" name="senha" autoComplete="off" className="input" value={senha} onChange={(e) => setSenha(e.target.value)}/>
                                         <label className="user-label">Senha</label>
                                     </div>
                                     <button className="subscribe-button w-100 rounded" type="submit">Entrar</button>
