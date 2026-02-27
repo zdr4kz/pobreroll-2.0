@@ -105,7 +105,7 @@ export default function Header() {
             Cadastrar
           </button>
         </a>
-        <a href="/login">
+        <a href="/Login">
           <button type="button" className="btnLogin">
             Entrar
           </button>
