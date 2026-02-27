@@ -1,39 +1,36 @@
-import {shows} from "@/data/shows";
-import Image from "next/image";
-import styles from "./page.module.css";
+
 import "./home.css";
-import DragCarousel from "@/components/Carrossel";
+import CarouselKids from "@/components/CarrosselKids";
+import ContinueWatching from "@/components/Continue/page";
+import CarouselNovidades from "@/components/CarrosselNovidades/page";
+import CarrosselDrama from "@/components/CarrosselDrama";
+import Hero from "@/components/Hero";
+import Top10Carousel from "@/components/Top10";
 
 export default function Home() {
-
   return (
-    <>
-      <main>
-        <div className="hero">
-          <div className="row">
-            <div className="col-lg-10 col-md-8 col-12 overlay">
-              <h1>Interestelar</h1>
-              <p>
-                Uma equipe de exploradores viaja através de um buraco de minhoca no espaço
-                na tentativa de garantir a sobrevivência da humanidade.
-              </p>
-              <button className="btn0">Assistir</button>
-            </div>
-          </div>
-        </div>
+    <main>
+      <Hero />
 
-        <section className="s1 bg-dark p-3"style={{ height: "4200px" }}>
+      <section className="home-section">
+        <ContinueWatching title="Continuar assistindo" />
+      </section>
 
-          <div className="">
-            <h3 className="text-white ps-3 pt-2">Animações para toda a família</h3>
-            <DragCarousel/>
+      <section className="home-section">
+        <Top10Carousel />
+      </section>
 
-          </div>
+      <section className="home-section">
+        <CarouselNovidades title="Novidades" />
+      </section>
 
-        </section>
+      <section className="home-section">
+        <CarouselKids title="Para toda a família" />
+      </section>
 
-
-      </main>
-    </>
+      <section className="home-section">
+        <CarrosselDrama title="Drama" />
+      </section>
+    </main>
   );
 }
